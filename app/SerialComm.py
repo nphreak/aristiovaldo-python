@@ -2,7 +2,7 @@ import serial
 
 
 def serial_start():
-    serialSetup = serial.Serial('COM6', 9600)
+    serialSetup = serial.Serial('COM4', 9600)
     return serialSetup
 
 arduino = serial_start()
