@@ -26,7 +26,6 @@ Baseado nas sílabas identificadas, enviar via serial para o arduino comandos pa
     - Vantagens
         - Já fiz interface para arduino antes, então tenho uma remota ideia de como usar comunicação serial
         - Estou me tornando uma pessoa melhor e tentado não abandonar os projetos.
-        - To de férias da faculdade, então tirando as 6h do trabalho, eu tenho bastante tempo livre
 
 
 - A Face

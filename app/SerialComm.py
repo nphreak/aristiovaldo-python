@@ -1,13 +1,16 @@
 import serial
 
-
-def serial_start():
+arduino = ""
+def serial_start(comPort):
     serialSetup = serial.Serial('COM4', 9600)
     return serialSetup
 
-arduino = serial_start()
+def connectOnPort():
+    arduino = serial_start("")
 
-def send_data(data):    
+
+
+def send_data(data):
     if(arduino.isOpen()):
         if(data == 1):
             arduino.write(b'1')
