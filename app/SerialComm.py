@@ -1,23 +1,17 @@
+from serial.tools import list_ports
 import serial
-
-arduino = ""
-def serial_start(comPort):
-    serialSetup = serial.Serial('COM4', 9600)
-    return serialSetup
-
-def connectOnPort():
-    arduino = serial_start("")
+import os
 
 
+def list_all_ports():    
+    com_port_list = list(list_ports.comports())
+    port_name_list = []
 
-def send_data(data):
-    if(arduino.isOpen()):
-        if(data == 1):
-            arduino.write(b'1')
-        elif(data == 0):
-            arduino.write(b'0')
-        elif(data == -1):
-            arduino.close()
-    else:
-        print("erro")
+    if len(com_port_list) > 0:
+        for port in com_port_list:
+            port_name_list.append(port.device)
 
+    return port_name_list
+
+def send_command():
+    print("em construção")
